@@ -70,9 +70,9 @@
       bindings = <
 
         &none     &kp TAB         &kp Q          &kp W   &kp E   &kp R   &kp T         &kp Y      &kp U     &kp I       &kp        &kp P             &mt RBKT LBKT    &none
-                  &hm LSHFT       &mt LSHFT A    &kp S   &kp D   &kp F   &kp G         &kp H      &kp J     &kp K       &kp L      &kp SEMI          &kp APOS
+                  &kp LSHFT       &hm LSHFT A    &kp S   &kp D   &kp F   &kp G         &kp H      &kp J     &kp K       &kp L      &kp SEMI          &kp APOS
                   &hm LCTRL GRAVE &kp Z          &kp X   &kp C   &kp V   &kp B         &kp N      &kp M     &kp COMMA   &kp DOT    &mt BSLH FSLH     &kp RBKT
-                                  &hm LALT ESC   &hm LGUI SPACE &ltp APP LG(SPACE)                    &hm RSHFT ENTER      &ltp NUM BSPC          &ltp FN DEL
+                                  &hm LALT ESC   &hm LGUI SPACE  &ltp APP LG(SPACE)    &hm RSHFT ENTER      &ltp NUM BSPC          &ltp FN DEL
         >;
     };
     // 
