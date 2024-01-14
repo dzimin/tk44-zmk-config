@@ -22,6 +22,15 @@
 
   behaviors {
 
+    esc_tab: esc_tab {
+    compatible = "zmk,behavior-mod-morph";
+    label = "ETAB";
+    #binding-cells = <0>;
+    bindings = <&kp ESC>, <&kp LG(TAB)>;
+    mods = <(MOD_LGUI)>;
+    keep-mods = <(MOD_LGUI|MOD_LSFT)>;
+    };   
+
     hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS";
@@ -69,13 +78,13 @@
       label = "Default";
       bindings = <
 
-        &none     &kp TAB         &kp Q          &kp W   &kp E   &kp R   &kp T         &kp Y      &kp U     &kp I       &kp O      &kp P             &mt RBKT LBKT    &none
-                  &kp LSHFT       &hm LSHFT A    &kp S   &kp D   &kp F   &kp G         &kp H      &kp J     &kp K       &kp L      &kp SEMI          &kp APOS
-                  &hm LCTRL GRAVE &kp Z          &kp X   &kp C   &kp V   &kp B         &kp N      &kp M     &kp COMMA   &kp DOT    &mt BSLH FSLH     &kp RBKT
-                                  &hm LALT ESC   &hm LGUI SPACE  &ltp APP LG(SPACE)    &hm RSHFT ENTER      &ltp NUM BSPC          &ltp FN DEL
+        &none     &esc_tab                &kp Q          &kp W   &kp E   &kp R   &kp T         &kp Y      &kp U     &kp I       &kp O      &kp P             &mt RBKT LBKT    &none
+                  &hm LCTRL TAB           &hm LSHFT A    &kp S   &kp D   &kp F   &kp G         &kp H      &kp J     &kp K       &kp L      &kp SEMI          &kp APOS
+                  &hm LSHFT LG(SPACE)     &kp Z          &kp X   &kp C   &kp V   &kp B         &kp N      &kp M     &kp COMMA   &kp DOT    &mt BSLH FSLH     &kp RBKT
+                                          &hm LALT GRAVE   &hm LGUI SPACE  &ltp APP LG(SPACE)    &hm RSHFT ENTER      &ltp NUM BSPC          &ltp FN DEL
         >;
     };
-    // 
+    
     num_layer {
       label="Num";
       bindings = <
