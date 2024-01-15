@@ -74,27 +74,27 @@
   keymap {
     compatible = "zmk,keymap";
 
-    // default_layer {
-    //   label = "Default";
-    //   bindings = <
-
-    //     &none     &kp ESC             &kp Q          &kp W   &kp E   &kp R   &kp T         &kp Y      &kp U     &kp I       &kp O      &kp P             &mt RBKT LBKT    &none
-    //               &ltp NUM TAB        &hm LSHFT A    &kp S   &kp D   &kp F   &kp G         &kp H      &kp J     &kp K       &kp L      &kp SEMI          &kp APOS
-    //               &kp LSHFT           &hm LCTRL Z    &kp X   &kp C   &kp V   &kp B         &kp N      &kp M     &kp COMMA   &kp DOT    &mt BSLH FSLH     &kp RBKT
-    //                                   &hm LALT GRAVE &hm LGUI SPACE  &ltp APP LG(SPACE)    &hm RSHFT ENTER      &lhp NUM BSPC          &ltp FN DEL
-    //     >;
-    // };
-  
     default_layer {
-    label = "Default";
-    bindings = <
+      label = "Default";
+      bindings = <
 
-      &none     &hm LCTRL TAB       &kp Q          &kp W   &kp E   &kp R   &kp T         &kp Y      &kp U     &kp I       &kp O      &kp P             &mt RBKT LBKT    &none
-                &kp LSHFT           &kp A          &kp S   &kp D   &kp F   &kp G         &kp H      &kp J     &kp K       &kp L      &kp SEMI          &kp APOS
-                &ltp NUM GRAVE      &kp Z          &kp X   &kp C   &kp V   &kp B         &kp N      &kp M     &kp COMMA   &kp DOT    &mt BSLH FSLH     &kp RBKT
-                                    &hm LALT ESC   &hm LGUI SPACE  &ltp APP LG(SPACE)    &hm RSHFT ENTER      &lhp NUM BSPC          &ltp FN DEL
-      >;
+        &none     &kp ESC             &kp Q          &kp W   &kp E   &kp R   &kp T         &kp Y      &kp U     &kp I       &kp O      &kp P             &mt RBKT LBKT    &none
+                  &ltp NUM TAB        &hm LSHFT A    &kp S   &kp D   &kp F   &kp G         &kp H      &kp J     &kp K       &kp L      &kp SEMI          &kp APOS
+                  &hm LSHFT GRAVE     &hm LCTRL Z    &kp X   &kp C   &kp V   &kp B         &kp N      &kp M     &kp COMMA   &kp DOT    &mt BSLH FSLH     &kp RBKT
+                                      &hm LALT GRAVE &hm LGUI SPACE  &ltp APP LG(SPACE)    &hm RSHFT ENTER      &lhp NUM BSPC          &ltp FN DEL
+        >;
     };
+  
+    // default_layer {
+    // label = "Default";
+    // bindings = <
+
+    //   &none     &hm LCTRL TAB       &kp Q          &kp W   &kp E   &kp R   &kp T         &kp Y      &kp U     &kp I       &kp O      &kp P             &mt RBKT LBKT    &none
+    //             &kp LSHFT           &hm LSHFT A    &kp S   &kp D   &kp F   &kp G         &kp H      &kp J     &kp K       &kp L      &kp SEMI          &kp APOS
+    //             &ltp NUM GRAVE      &kp Z          &kp X   &kp C   &kp V   &kp B         &kp N      &kp M     &kp COMMA   &kp DOT    &mt BSLH FSLH     &kp RBKT
+    //                                 &hm LALT ESC   &hm LGUI SPACE  &ltp APP LG(SPACE)    &hm RSHFT ENTER      &lhp NUM BSPC          &ltp FN DEL
+    //   >;
+    // };
 
     num_layer {
       label="Num";
