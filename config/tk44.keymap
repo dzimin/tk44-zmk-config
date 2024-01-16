@@ -26,7 +26,7 @@
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&kp GRAVE>, <&kp ESC>;
-      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_RGUI)>;
     };
       
     hm: homerow_mods {
