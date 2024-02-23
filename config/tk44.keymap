@@ -88,11 +88,11 @@
       bindings = <
 
         &none     &graves         &kp Q          &kp W            &kp E   &kp R   &kp T         &kp Y      &kp U     &kp I       &kp O      &kp P             &kp LBKT    &none
-                  &hm LS(TAB) TAB   &hm LSHFT A    &kp S            &kp D   &kp F   &kp G         &kp H      &kp J     &kp K       &kp L      &hm RSHFT SEMI    &kp APOS
+                  &kp TAB         &hm LSHFT A    &kp S            &kp D   &kp F   &kp G         &kp H      &kp J     &kp K       &kp L      &hm RSHFT SEMI    &kp APOS
                   &kp LC(LA(A))   &hm LCTRL Z    &kp X            &kp C   &kp V   &kp B         &kp N      &kp M     &kp COMMA   &kp DOT    &mt BSLH FSLH     &kp RBKT
-                                    &hm LALT LA(B)   &hm LGUI SPACE   &ltp APP LG(SPACE)            &kp ENTER      &lhp NUM BSPC          &ltp FN DEL
+                                  &hm LALT LA(B)   &hm LGUI SPACE   &ltp APP LG(SPACE)            &kp ENTER      &lhp NUM BSPC          &ltp FN DEL
         >;
-    };
+  };
 
     num_layer {
       label="Num";
