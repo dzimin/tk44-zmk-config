@@ -11,9 +11,10 @@
 
 #define DEFAULT 0
 #define NUM     1
-#define FN      2
-#define APP     3
-#define SYSTEM  4
+#define LNUM    2
+#define FN      3
+#define APP     4
+#define SYSTEM  5
 
 &lt { quick-tap-ms = <200>; };
 &mt { quick-tap-ms = <200>; };
@@ -25,7 +26,7 @@
     graves: grave_escape {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&lhp NUM GRAVE>, <&kp ESC>;
+      bindings = <&lhp APP GRAVE>, <&kp ESC>;
       mods = <(MOD_LGUI|MOD_RGUI)>;
     };
       
@@ -90,7 +91,7 @@
         &none     &graves         &kp Q          &kp W            &kp E   &kp R   &kp T         &kp Y      &kp U     &kp I       &kp O      &kp P             &kp LBKT    &none
                   &kp TAB         &hm LSHFT A    &kp S            &kp D   &kp F   &kp G         &kp H      &kp J     &kp K       &kp L      &hm RSHFT SEMI    &kp APOS
                   &kp LC(LA(A))   &hm LCTRL Z    &kp X            &kp C   &kp V   &kp B         &kp N      &kp M     &kp COMMA   &kp DOT    &mt BSLH FSLH     &kp RBKT
-                                  &hm LALT LA(B)   &hm LGUI SPACE   &ltp APP LG(SPACE)            &kp ENTER      &lhp NUM BSPC          &ltp FN DEL
+                                  &hm LALT LA(B)   &hm LGUI SPACE   &ltp LNUM LG(SPACE)            &kp ENTER      &lhp NUM BSPC          &ltp FN DEL
         >;
   };
 
@@ -98,13 +99,25 @@
       label="Num";
       bindings = <
 
-        &trans  &trans     &kp EXCL &kp AT &kp HASH &kp DLLR &kp PERCENT        &kp CARET   &kp AMPS      &kp UP      &kp LPAR    &kp RPAR    &kp LA(LS(MINUS))   &trans
-                &trans     &hm LSHFT N1 &kp N2 &kp N3 &kp N4 &kp N5             &kp STAR    &kp LEFT      &kp DOWN    &kp RIGHT   &kp MINUS   &kp PLUS 
-                &trans     &hm LCTRL N6 &kp N7 &kp N8 &kp N9 &kp N0             &none       &kp LC(LA(A)) &none       &none       &kp UNDER    &kp EQUAL 
-                &trans &trans &kp BSPC                                          &mo SYSTEM  &trans      &trans
+        &none   &trans     &kp EXCL &kp AT &kp HASH &kp DLLR &kp PERCENT        &kp CARET     &kp AMPS    &kp UP        &kp LPAR          &kp RPAR    &kp LA(LS(MINUS))   &none
+                &trans     &hm LSHFT N1 &kp N2 &kp N3 &kp N4 &kp N5             &kp STAR      &kp LEFT    &kp DOWN      &kp RIGHT         &kp MINUS   &kp UNDER  
+                &trans     &hm LCTRL N6 &kp N7 &kp N8 &kp N9 &kp N0             &kp LA(N2)    &none       &kp LA(SEMI)  &kp LA(LS(SEMI))  &kp PLUS    &kp EQUAL 
+                &trans &trans &kp BSPC                                          &mo SYSTEM    &trans      &trans
 
       >;
     };
+
+      lnum_layer {
+      label="LNum";
+      bindings = <
+
+        &none   &trans     &kp DOWN   &kp LEFT  &kp UP    &kp RIGHT   &kp PERCENT       &none     &none       &none     &none       &none       &none     &none
+                &trans     &kp N1     &kp N2    &kp N3    &kp N4      &kp N5            &none     &none       &none     &none       &none       &none
+                &trans     &kp N6     &kp N7    &kp N8    &kp N9      &kp N0            &none     &none       &none     &none       &none       &none
+                &kp BSPC &trans &trans                                                  &none     &none       &none    
+      >;
+    };    
+
 
     fn_layer {
       label = "Fn";
@@ -133,10 +146,10 @@
       label = "App";
       bindings = <  
       
-      &trans  &trans  &kp LC(LEFT)       &kp LEFT             &kp LC(UP)              &kp RIGHT                &kp LC(RIGHT)              &none   &none           &none     &none       &none         &none   &trans
+      &none   &trans  &kp LC(LEFT)       &kp LC(LEFT)           &kp LC(UP)            &kp LC(LEFT)             &kp LC(RIGHT)              &none   &none           &none     &none       &none         &none   &none
               &trans  &none              &kp LC(LA(LEFT))     &kp LC(LA(DOWN))        &kp LC(LA(RIGHT))        &kp LC(LA(UP))             &kp LG(H)   &none           &none     &none       &none         &none
               &trans  &kp LC(LA(J))      &kp LC(LA(U))        &kp LC(LA(I))           &kp LC(LA(K))            &kp LC(LA(ENTER))          &none   &kp LC(LA(A))   &none     &none       &none         &none
-              &kp LG(LS(N4))             &kp LC(LG(SPACE))    &trans                                                                      &trans  &trans          &trans
+              &kp LC(LG(SPACE))          &kp LG(LS(N4))       &trans                                                                      &trans  &trans          &trans
       >;
     };
 
